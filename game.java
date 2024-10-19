@@ -29,11 +29,14 @@ class game {
                 a=10;
                 b=15;
                 
-                System.out.println((a + b) + " add");//25
-                System.out.println(a*b + "mul"); // 150
-                System.out.println(a%b+"division");//
-                System.out.println(a-b+"minus"); //-5
+                // System.out.println((a + b) + " add");//25
+                // System.out.println(a*b + "mul"); // 150
+                // System.out.println(a%b+"division");//
+                // System.out.println(a-b+"minus"); //-5
 
-
+        //             
+        // 
+        System.out.println(a==b);
+       System.out.println(5>4 && 5>2);
         }
 }
