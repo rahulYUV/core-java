@@ -17,16 +17,16 @@ public class demonstration {
         f=e^f;
         e=e^f;
         System.out.println(" e is : "+e +"  f is :" + f);// it good 
-     //masking and merging 
-      byte a=9;
-      byte b =12;
-      byte c;
+        //masking and merging 
+        byte a=9;
+        byte b =12;
+        byte c;
 
-      c= (byte) (a<<4);
-      c=(byte)(c|b);
-      System.out.println(c);
+        c= (byte) (a<<4);
+        c=(byte)(c|b);
+        System.out.println(c);
 
 
 
-}
+    }
 }
