@@ -89,10 +89,12 @@ public class string{
       //  int n =  str3.compareTo(str4);
       //  System.out.println(n);
 
-
-      String str1 = "pyramid";
-      String str2 = "pyramid";
-      System.out.println(str1.equals(str2));// it als check space 
-      System.out.println(str1.compareTo(str2));
+        
+        String str1 = "b";
+        System.out.println(str1.matches("[a|b]"));
+      
+    
+    
+    
     }
 }
