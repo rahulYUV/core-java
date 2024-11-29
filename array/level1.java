@@ -38,16 +38,34 @@ public class level1 {
      // copying an revers in array 
      int arr[]={1,2,3,4,5};
      int brr[]= new int[arr.length];
-        int n = arr.length-1;
+        // int n = arr.length-1;
         //i<arr.length && n>=0  both works
-        for(int i =0;n>=0 ;i++,n--){
-            brr[i]=arr[n];
+        // for(int i =0;n>=0 ;i++,n--){
+        //     brr[i]=arr[n];
 
+        // }
+        // for(int x: brr){
+        //     System.out.println(x);
+        // }
+
+        int a[]= {2,4,6,8};
+        int b[] = new int[2*a.length];
+        int n = a.length-1;
+        for(int i =0;n>=0 ;i++,n--){
+            b[i]=a[n];
         }
-        for(int x: brr){
-            System.out.println(x);
-        }
-     
+        System.out.println("this is teh first length");
+        System.out.println(a.length);
+        a=b;
+        
+        // for(int x:b){
+        //     System.out.println(x);
+        // }
+        System.out.println(b.length);
+            for(int x: a){
+                System.out.println(x);
+            }
+        System.out.println(a.length);
 
 
     }
