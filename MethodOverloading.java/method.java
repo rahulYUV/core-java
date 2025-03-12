@@ -14,11 +14,41 @@
 public class method {
 
     public static void main(String[] args) {
-        Calculator calc = new Calculator();
-        calc.add();             // Calls add() with no parameters
-        calc.add(10, 15);       // Calls add(int, int)
-        calc.add(10, 15.5);     // Calls add(int, double)
-    }
+
+
+        // System.out.println(args);
+        // Calculator calc = new Calculator();
+        // calc.add();             // Calls add() with no parameters
+        // calc.add(10, 15);       // Calls add(int, int)
+        // calc.add(10, 15.5);     // Calls add(int, double)
+        
+                      
+
+                    // PaymentProcessor paymentProcesss =  new PaymentProcessor();
+                    // // paymentProcess.processPayment("52352562",250.00);
+                    // paymentProcesss.processPayment("325235235",":001",150);
+                    // paymentProcesss.processPayment("555555555555555566",1000,"paypal");
+
+                    //   getArea findArea =  new getArea();
+                    //   findArea.area(4);
+                    //   findArea.area(4,5);
+                    // findArea.area(5,4,6);
+
+                             Exercise temp = new Exercise();
+                                temp.plus("what we can ", "may thing we can do ");
+                                temp.plus("a", 4 +"this is string + int ");
+                                temp.plus("aaa",5.5+"this is double ");
+                    
+                               
+                                // paymentProcessor.processPayment("1234567890123456", 250.00); // Credit card payment
+                                // paymentProcessor.processPayment("987654321", "001", 150.00); // Bank account payment
+                                // paymentProcessor.processPayment("5556667777", 100.00, "PayPal"); // Mobile wallet payment
+                        }
+                    
+                        private static void paymentProcess(String string, int i) {
+                            // TODO Auto-generated method stub
+                            throw new UnsupportedOperationException("Unimplemented method 'paymentProcess'");
+                        }
 }
 
 class Calculator {
@@ -61,11 +91,7 @@ class PaymentProcessor {
     }
 }
 
-// Example Usage:
-// PaymentProcessor paymentProcessor = new PaymentProcessor();
-// paymentProcessor.processPayment("1234567890123456", 250.00); // Credit card payment
-// paymentProcessor.processPayment("987654321", "001", 150.00); // Bank account payment
-// paymentProcessor.processPayment("5556667777", 100.00, "PayPal"); // Mobile wallet payment
+
 
 // In this example, the 'processPayment' method is overloaded to handle different payment methods,
 // each with a different set of parameters. This demonstrates method overloading in a real-world scenario.
@@ -114,8 +140,43 @@ class Person {
 
 
 
+class getArea {
+                    void area(int radius){
+                        double areaIs = 3.14 * radius*radius;
+                        System.out.println("the radius of circle is "+ areaIs);
+
+                    }
+                    void area(int lenght , int breadth ){
+                        System.out.println("the area of rectange is  "+lenght*breadth);
+                    }
+                    void area(int lenght , int breadth , int height ){
+                            System.out.println("the area of triangel  is  "+lenght*breadth*height);
+                    }
+                    
+};
 
 
+
+
+
+
+            class Exercise {
+                                // Create a class with an overloaded method concatenate() that:
+                                // Concatenates two strings.
+                                // Concatenates a string and an integer.
+                                // Concatenates a string and a double.
+                                // Best Practices for Revising and Practicing Method Overloading:
+
+                                void plus(String a , String b ){
+                                    System.out.println(a+b);
+                                }
+                                void plus(String a , int b ){
+                                    System.out.println(a+b);
+                                }
+
+                                void plus(String a , double b ){
+                                    System.out.println(a+b);
+                                }                            };
 
 
 
