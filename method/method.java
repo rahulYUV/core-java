@@ -1,144 +1,88 @@
+package method;
+
 import java.util.*;
 
-public class method {
-    public static void main(String args[]){
-        Scanner sc = new Scanner(System.in);
-
-            int a =10;
-            {
-                // int a =20;
-                //alredy init in the same method so it can't change (it dosent init again)
-                //but we can modify the value
-                a=100;//modify the value because this is reference same object;
-                
-
-            }
-            System.out.println(a);
-        // add();
-        // int c=add();
-        // System.out.println("this is the c"+c);
-
-        // String str = new String("singh");
-
-        // greet(str);
-     
-     
-    //    String personalised=greeting("raghu");
-    //    System.out.println(personalised);
-    //    int a =5,b=10;
-
-    //     swap(a,b);
-    //     System.out.print("this is the test");
-
-    //     System.out.println(a+b);
-    //     System.out.println("this is a "+a+"this is the b: "+b
-    //     );
-        
-
-        int arr[]={0};
-        System.out.println(arr[0]);
-        change(arr);
-        System.out.println(arr[0]);
-        // String name= "rahul kumar";
-        // changename(name);
-        // System.out.println(name);
-
-    // int a,b=45;
-    // a=factt(b);
-    // System.out.println("this is the fact of a : "+a);
+/**
+ * This class demonstrates various concepts of methods in Java including:
+ * - Method parameters and return types
+ * - Pass by value vs Pass by reference
+ * - Variable scope
+ * - Method overloading
+ */
+public class Method {
+    public static void main(String[] args) {
+        demonstrateScopeExample();
+        demonstrateArrayPassByReference();
+        // Other examples are commented out but organized below
     }
-    public static void greet(String name){
-        System.out.println("have a good day: "+name);
+
+    // SECTION 1: Variable Scope Example
+    private static void demonstrateScopeExample() {
+        int a = 10;
+        {
+            // Cannot reinitialize 'a' here because it's already defined in outer scope
+            // int a = 20; // This would cause error
+            a = 100; // But we can modify the value
+        }
+        System.out.println("Scope example result: " + a);
     }
-     static int  add(){
+
+    // SECTION 2: Basic Method Examples
+    private static void greet(String name) {
+        System.out.println("Have a good day: " + name);
+    }
+
+    private static int add() {
         Scanner sc = new Scanner(System.in);
-        int num1,num2,sum;
-        System.out.println("the first and second number");
-        num1 =sc.nextInt();
-        num2=sc.nextInt();
-        sum = num1+num2;
-        System.out.println(" the summatin is :"+ sum);
+        System.out.println("Enter the first and second number:");
+        int num1 = sc.nextInt();
+        int num2 = sc.nextInt();
+        int sum = num1 + num2;
+        System.out.println("The summation is: " + sum);
         return sum;
-
     }
 
-    //pass the value of the number when  you are calling the method in main= parametere 
-    public static int sum(int a,int  b){
-        return a+b;
-
+    private static int sum(int a, int b) {
+        return a + b;
     }
 
-    static String greeting(String name ){
-        String message = "hey"+name;
-        return message;
-
+    private static String greeting(String name) {
+        return "hey " + name;
     }
 
-// pass by value 
-//changes are locally 
-
-    public static void  swap(int a,int b ){
-        a = a^b;
-        b=a^b;
-        a=a^b;
-        System.out.println("this the inside the swap fn ");
-        System.out.println("this is a "+a+"this is the b: "+b
-        );
-
+    // SECTION 3: Pass By Value Example
+    private static void swap(int a, int b) {
+        a = a ^ b;
+        b = a ^ b;
+        a = a ^ b;
+        System.out.println("Inside swap function:");
+        System.out.println("a: " + a + ", b: " + b);
     }
-    public static int factt(int n){
-        if(n==1){
+
+    // SECTION 4: Recursion Example
+    private static int factorial(int n) {
+        if (n == 1) {
             return 1;
-
         }
-        else{
-                return n*factt(n-1);
-
-        }
+        return n * factorial(n - 1);
     }
-    
-static String changename(String name){
-    name ="naya naam ";
-    System.out.println( name );
-    return name;
-    
-}
 
+    // SECTION 5: String Immutability Example
+    private static String changeName(String name) {
+        name = "naya naam";
+        System.out.println(name);
+        return name;
+    }
 
+    // SECTION 6: Array Pass By Reference Example
+    private static void demonstrateArrayPassByReference() {
+        int[] arr = {0};
+        System.out.println("Before change: " + arr[0]);
+        change(arr);
+        System.out.println("After change: " + arr[0]);
+    }
 
-//function is the block of code 
-//take a input of two no and print their sum 
-//how the thing work internally 
- 
-public static void change(int arr[]){
-    arr[0]=99;
-    //the value is changes now 
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    private static void change(int[] arr) {
+        arr[0] = 99;
+    }
 }

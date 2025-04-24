@@ -9,7 +9,7 @@ public class basic {
         int[] arr= new int[5];
         int brr[] ={1,2,3,4,5};
         // bydefault 00000 interallny ;
-      String[] arrs = new String[5];
+      String[] arrs = new String[5]; // initiall it is null
         System.out.println(arrs[0]);
 
      
